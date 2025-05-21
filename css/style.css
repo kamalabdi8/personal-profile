@@ -1,0 +1,169 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('/images/images.jpeg') no-repeat center center / cover;
+  z-index: -1;
+  opacity: 1;
+}
+
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Header */
+header {
+  text-align: left;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  color: #27ae60;
+}
+
+
+.contact {
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #ddd;
+}
+.contact a:hover{
+  text-decoration: none;
+  color: blue;
+}
+
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Section Titles */
+section h3 {
+  font-size: 1.4rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+/* Section Items */
+.section-item {
+  margin-bottom: 15px;
+}
+
+.section-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.section-item p {
+  font-size: 0.95rem;
+}
+
+/* Lists for Skills, Languages, Hobbies */
+.skills-list,
+.languages-list,
+.hobbies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  margin-right: 40%;
+  padding: 0;              /* Remove default ul padding */
+  list-style-type: none;   /* Remove bullets */
+}
+@media screen and (max-width: 720px) {
+  .skills-list{margin-right: 0;}
+}
+
+.skills-list li,
+.languages-list li,
+.hobbies-list li {
+  background-color: #e8f0fe;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); */
+  margin: 5px 0;
+}
+
+/* Unordered Lists */
+
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* New styles for profile section with background and profile image */
+
+.skills-section {
+  background-image: url('images/background.jpg'); /* Adjust path relative to CSS file */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  text-align: left;
+}
+.skills-section ul{
+ color: black;
+}
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-right: 30px; /* margin-top margin-right margin-bottom margin-left  */
+  display: block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  float: left;
+}
